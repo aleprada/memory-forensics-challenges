@@ -11,13 +11,13 @@ I've chosen challenges from the following websites:
 **The Volatility Foundation**
 The volatility foundation is a non-profit organisation that promotes and maintains Volatility, the popular open-source tool for memory forensics. On their Github, you can find a good list of some memory samples from different sources such as CTFs, books or malware samples.
 
-* [Cridex Malware](https://github.com/volatilityfoundation/volatility/wiki/Memory-Samples)
+* [Cridex Malware](https://github.com/volatilityfoundation/volatility/wiki/Memory-Samples) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/Volatility%20Foundation%20samples/cridex.md)
 
 **CCN-CERT ATENEA** 
 ATENEA is a CTF platform hosted by the CCN-CERT, the Spanish Government CERT. ATENEA contains different types of challenges such as memory forensics, reversing or cryptography.
 
-* [Password]https://atenea.ccn-cert.cni.es/challenges?category=retos-2019() -> Write up
-* [CVE](https://atenea.ccn-cert.cni.es/challenges?category=retos-2018#collapse22) -> Write up
+* [Password](https://atenea.ccn-cert.cni.es/challenges?category=retos-2019) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/ATENEA/password/password.md)
+* [CVE](https://atenea.ccn-cert.cni.es/challenges?category=retos-2018#collapse22) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/ATENEA/CVE/cve.md)
 
 **Cyber Defenders**
 
