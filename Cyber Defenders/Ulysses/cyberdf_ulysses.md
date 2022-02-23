@@ -1,9 +1,15 @@
-# Author: Alejandro Prada
 
-# Challenge: Cyber Defenders:Ulysses
+# Cyberdefenders: Ulysses
 
-# Challenge Description:
+## Description
 
+A Linux server was possibly compromised and a forensic analysis is required in order to understand what really happened. Hard disk dumps and memory snapshots of the machine are provided in order to solve the challenge.
+
+Challenge Files:
+
+* victoria-v8.kcore.img: memory dump done by dd’ing /proc/kcore.
+* victoria-v8.memdump.img: memory dump done with memdump.
+* Debian5_26.zip: volatility custom Linux profile
 
 
 # Solution
@@ -13,8 +19,6 @@ mkdir mount_point
 sudo mount -o loop victoria-v8.sda1.img mount_point/
 sudo cat mount_point/var/log/auth.log |grep ""
 ```
-
-# Flags:
 
 - Flag1:ulysses
 
