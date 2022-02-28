@@ -24,7 +24,7 @@ ATENEA is a CTF platform hosted by the CCN-CERT, the Spanish Government CERT. AT
 Cyberdefenders is a great training platform for BlueTeams to test their CyberDefense skills. The platform contains many free challenges of different types such as Malicious Documents, Reversing, Memory Forensics, etc.
 
 
-* [BsidesJeddah-Part2](https://cyberdefenders.org/blueteam-ctf-challenges/82) -> Write up is coming!
+* [BsidesJeddah-Part2](https://cyberdefenders.org/blueteam-ctf-challenges/82) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/Cyber%20Defenders/BsidesJeddah/bsidesjeddah.md)
 * [DeepDive](https://cyberdefenders.org/blueteam-ctf-challenges/78) -> Write up is coming
 * [Brave](https://cyberdefenders.org/blueteam-ctf-challenges/67) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/Cyber%20Defenders/Brave/brave.md)
 * [DumpMe](https://cyberdefenders.org/blueteam-ctf-challenges/65) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/Cyber%20Defenders/DumpMe/dumpme.md)
