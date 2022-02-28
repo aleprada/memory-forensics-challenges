@@ -50,6 +50,8 @@ vol.py -f banking-malware.vmem --profile Win7SP1x64_24000 vadinfo -a 0x2a80000 |
 
 ```
 
+![](./images/deepdive_malfind.jpg)
+
 ### 8)	This process was unlinked from the ActiveProcessLinks list. Follow its forward link. Which process does it lead to? Answer with its name and extension
 ```
 vol.py -f banking-malware.vmem --profile Win7SP1x64_24000 volshell
