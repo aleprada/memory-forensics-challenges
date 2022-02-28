@@ -25,8 +25,8 @@ Cyberdefenders is a great training platform for BlueTeams to test their CyberDef
 
 
 * [BsidesJeddah-Part2](https://cyberdefenders.org/blueteam-ctf-challenges/82) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/Cyber%20Defenders/BsidesJeddah/bsidesjeddah.md)
-* [DeepDive](https://cyberdefenders.org/blueteam-ctf-challenges/78) -> Write up is coming
+* [DeepDive](https://cyberdefenders.org/blueteam-ctf-challenges/78) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/Cyber%20Defenders/DeepDive/deepdive.md)
 * [Brave](https://cyberdefenders.org/blueteam-ctf-challenges/67) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/Cyber%20Defenders/Brave/brave.md)
 * [DumpMe](https://cyberdefenders.org/blueteam-ctf-challenges/65) -> [Write up](https://github.com/aleprada/memory-forensics-challenges/blob/main/Cyber%20Defenders/DumpMe/dumpme.md)
-* [Banking Troubles](https://cyberdefenders.org/blueteam-ctf-challenges/43)-> Write up is coming!
+* [Banking Troubles](https://cyberdefenders.org/blueteam-ctf-challenges/43)-> Write up
 * [Ulysses](https://cyberdefenders.org/blueteam-ctf-challenges/41) -> Write up is coming
