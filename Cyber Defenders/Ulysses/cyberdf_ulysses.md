@@ -13,6 +13,7 @@ Challenge Files:
 
 
 # Solution
+Before starting analyse the memory dump with Volatility, we mount the hard disk for checking the OS logs.
 
 ```bash
 mkdir mount_point
@@ -20,71 +21,60 @@ sudo mount -o loop victoria-v8.sda1.img mount_point/
 sudo cat mount_point/var/log/auth.log |grep ""
 ```
 
-- Flag1:ulysses
 
-```bash
-sudo cat auth.log |grep "user"
-```
+### 1)	The attacker was performing a Brute Force attack. What account triggered the alert?
 
-- Flag2:32
-
-```bash
-sudo cat auth.log |grep -i "failed"|wc -l
-```
-
-Without adding the null login
-
-- Flag3:Debian GNU/Linux 5.0
-
-```bash
-cat /etc/issue.net
-```
-
-- Flag4:192.168.56.102
-
-```bash
-python2 volatility/vol.py -f victoria-v8.memdump.img --profile=LinuxDebian5_26x86 linux_netstat
-```
-
-- Flag5:192.168.56.1,192.168.56.101
-
-```bash
-python2 volatility/vol.py -f victoria-v8.memdump.img --profile=LinuxDebian5_26x86 linux_netstat
-```
-
-- Flag6:2169
-
-```bash
-python2 volatility/vol.py -f victoria-v8.memdump.img --profile=LinuxDebian5_26x86 linux_pslist |grep "nc"
-```
-
-- Flag7:exim4
-
-```bash
-python2 volatility/vol.py -f victoria-v8.memdump.img --profile=LinuxDebian5_26x86 linux_psaux
-```
-
-- Flag8:CVE-2010-4344
 
 ```
-https://www.cvedetails.com/cve/CVE-2010-4344/
+sudo cat ./mount_point/var/log/auth.log |grep "user"
 ```
 
-A simple google search for: <code>exim4 cve 2010</code>
+### 2)	How many were failed attempts there?
 
-- Flag9:rk.tar
-
-```bash
-sudo ls mount_point/tmp/
+```
+cat ./mount_point/var/log/auth.log | grep "Failed"|wc -l
 ```
 
-- Flag10:8888
-
-```bash
-python2 volatility/vol.py -f victoria-v8.memdump.img --profile=LinuxDebian5_26x86 linux_netstat
+### 3)	What kind of system runs on the targeted server?
+```
+cat ./mount_point/etc/issue.net
+```
+### 4)	What is the victim's IP address?
+```
+cat ./mount_point/etc/issue.net
 ```
 
-- Flag11:45295
+### 5) What are the attacker's two IP addresses? Format: comma-separated in ascending order
+```
+vol.py -f victoria-v8.memdump.img --profile=LinuxDebian5_26x86 linux_netstat
+```
+
+### 6)	What is the "nc" service PID number that was running on the server?
+
+```
+vol.py -f victoria-v8.memdump.img --profile=LinuxDebian5_26x86 linux_pslist |grep "nc"
+```
+### 7)	What service was exploited to gain access to the system? (one word)
+```
+vol.py -f victoria-v8.memdump.img --profile=LinuxDebian5_26x86 linux_psaux
+```
+![](./images/ulysses_ps_linux.jpg)
+
+### 8)	What is the CVE number of exploited vulnerability?
+Google Exim4 CVE 2010 and you will find out.
+
+### 9)	During this attack, the attacker downloaded two files to the server. Provide the name of the compressed file.
+```
+ls ./mount_point/tmp/
+```
+
+### 10)	Two ports were involved in the process of data exfiltration. Provide the port number of the highest one.
+```
+vol.py -f victoria-v8.memdump.img --profile=LinuxDebian5_26x86 linux_netstat
+```
+
+### 11)	Which port did the attacker try to block on the firewall?
+
 
 ```bash
 cd mount_point/tmp/
@@ -92,3 +82,4 @@ sudo tar xvf rk.tar
 cd rk
 cat install.sh |grep "port"
 ```
+![](./images/ulysses_port_firewall.jpg)
